@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/movies-service/cs122b-be2-movies-service-starter.iml" filepath="$PROJECT_DIR$/movies-service/cs122b-be2-movies-service-starter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/services/idm-service/cs122b-be1-idm-service-starter.iml" filepath="$PROJECT_DIR$/services/idm-service/cs122b-be1-idm-service-starter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/services/movies-service/cs122b-be2-movies-service-starter.iml" filepath="$PROJECT_DIR$/services/movies-service/cs122b-be2-movies-service-starter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/services/billing-service/cs122b-be3-billing-service-starter.iml" filepath="$PROJECT_DIR$/services/billing-service/cs122b-be3-billing-service-starter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/services/gateway-service/cs122b-be4-gateway-service-starter.iml" filepath="$PROJECT_DIR$/services/gateway-service/cs122b-be4-gateway-service-starter.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/john-flix.iml" filepath="$PROJECT_DIR$/.idea/john-flix.iml" />
     </modules>
   </component>
