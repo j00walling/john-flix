@@ -1,0 +1,16 @@
+{
+  "idmBaseUrl": "http://localhost:8081",
+  "moviesBaseUrl": "http://localhost:8082",
+  "billingBaseUrl": "http://localhost:8083",
+  "idm": {
+    "login": "/login",
+    "register": "/register"
+  },
+  "movies": {
+    "search": "/movie/search",
+    "getMovieDetail": "/movie/"
+  },
+  "billing": {
+    "insertCart": "/cart/insert"
+  }
+}

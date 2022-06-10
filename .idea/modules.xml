@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/movies-service/cs122b-be2-movies-service-starter.iml" filepath="$PROJECT_DIR$/movies-service/cs122b-be2-movies-service-starter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/john-flix.iml" filepath="$PROJECT_DIR$/.idea/john-flix.iml" />
+    </modules>
+  </component>
+</project>
