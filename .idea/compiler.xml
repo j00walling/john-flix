@@ -7,16 +7,21 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="cs122b-be2-movies-service-starter" />
+        <module name="idm-service" />
         <module name="cs122b-be3-billing-service-starter" />
         <module name="cs122b-be4-gateway-service-starter" />
-        <module name="cs122b-be1-idm-service-starter" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="cs122b-be1-idm-service-starter" target="1.5" />
       <module name="cs122b-be2-movies-service-starter" target="1.5" />
       <module name="cs122b-be3-billing-service-starter" target="1.5" />
       <module name="cs122b-be4-gateway-service-starter" target="1.5" />
+      <module name="idm-service" target="19" />
     </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="idm-service" options="-parameters" />
+    </option>
   </component>
 </project>

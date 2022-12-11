@@ -1,7 +1,7 @@
 {
   "idmBaseUrl": "http://localhost:8081",
   "moviesBaseUrl": "http://localhost:8082",
-  "billingBaseUrl": "http://localhost:8083",
+  "cartBaseUrl": "http://localhost:8083",
   "idm": {
     "login": "/login",
     "register": "/register"
@@ -11,6 +11,16 @@
     "getMovieDetail": "/movie/"
   },
   "billing": {
-    "insertCart": "/cart/insert"
+    "insertCart": "/cart/insert",
+    "retrieveCart": "/cart/retrieve",
+    "updateCart": "/cart/update",
+    "deleteCart": "/cart/delete/",
+    "clearCart": "/cart/clear"
+  },
+  "order": {
+    "orderPayment": "/order/payment",
+    "orderComplete": "/order/complete",
+    "orderList": "/order/list",
+    "orderDetail": "/order/detail/"
   }
 }

@@ -1,6 +1,9 @@
 import React from "react";
-import {NavLink} from "react-router-dom";
 import styled from "styled-components";
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+
+import { NavLink } from "react-router-dom";
+import {green} from "@mui/material/colors";
 
 const StyledNav = styled.nav`
   display: flex;
@@ -20,19 +23,6 @@ const StyledNavLink = styled(NavLink)`
   text-decoration: none;
 `;
 
-/**
- * To be able to navigate around the website we have these NavLink's (Notice
- * that they are "styled" NavLink's that are now named StyledNavLink)
- * <br>
- * Whenever you add a NavLink here make sure to add a corresponding Route in
- * the Content Component
- * <br>
- * You can add as many Link as you would like here to allow for better navigation
- * <br>
- * Below we have two Links:
- * <li>Home - A link that will change the url of the page to "/"
- * <li>Login - A link that will change the url of the page to "/login"
- */
 const NavBar = () => {
     return (
         <StyledNav>
@@ -44,6 +34,12 @@ const NavBar = () => {
             </StyledNavLink>
             <StyledNavLink to="/">
                 Home
+            </StyledNavLink>
+            <StyledNavLink to="/order/list">
+                Order History
+            </StyledNavLink>
+            <StyledNavLink to="/cart">
+                <ShoppingCartIcon sx={{ fontSize: 30 }}/>
             </StyledNavLink>
         </StyledNav>
     );

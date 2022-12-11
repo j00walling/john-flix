@@ -1,24 +1,11 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import styled from "styled-components";
 import Movies from "backend/movies";
+import Order from "../backend/order";
 
 import { useForm } from "react-hook-form";
 import { useUser } from "../hook/User";
-// import { useTable } from "react-table";
-import localStorage from "local-storage";
-
-// export default function BasicTable({ columns, data }) {
-//     const {
-//         getTableProps, // Sends the needed props to your table.
-//         getTableBodyProps, // Sends needed props to your table body
-//         headerGroups, // Returns normalized header groups
-//         rows, // rows for the table based on the data passed
-//         prepareRow // Prepare the row in order to be displayed.
-//     } = useTable({
-//         columns,
-//         data
-//     });
-// }
+import { useSearchParams } from "react-router-dom";
 
 const StyledDiv = styled.div`
   display: flex;
@@ -30,6 +17,7 @@ const Home = () => {
     const { register, getValues, handleSubmit } = useForm();
     const [ message, setMessage ] = React.useState("");
     const [ page, changePage ] = React.useState(1);
+    const [ searchParams, setSearchParams ] = useSearchParams();
 
     const submitSearch = () => {
         const movieTitle = getValues("movieTitle");
@@ -58,6 +46,18 @@ const Home = () => {
             })
             .catch(error => alert(JSON.stringify(error.response.data, null, 2)))
     }
+
+    const orderComplete = () => {
+        const paymentIntentId = searchParams.get("payment_intent");
+
+        if (paymentIntentId !== null) {
+            Order.orderComplete({ paymentIntentId: paymentIntentId }, accessToken)
+                .then(response => alert(JSON.stringify(response.data, null, 2)))
+                .catch(error => alert(JSON.stringify(error.response.data, null, 2)));
+        }
+    }
+
+    useEffect(() => orderComplete(), []);
 
     return (
         <StyledDiv>
@@ -106,8 +106,8 @@ const Home = () => {
                 </StyledDiv>
             ))}
             <br/>
-            <button onClick={() => {changePage(page + 1)}} id="pageButton">Next ({page})</button>
-            <button onClick={() => changePage(page - 1)} id="pageButton">Back</button>
+            <button onClick={() => {changePage(Math.max(page + 1, 1))}} id="pageButton">Next ({page})</button>
+            <button onClick={() => changePage(Math.max(page - 1, 1))} id="pageButton">Back</button>
         </StyledDiv>
     );
 }

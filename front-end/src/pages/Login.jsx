@@ -74,7 +74,7 @@ const Login = () => {
     } = useUser();
 
 
-    const {register, getValues, handleSubmit} = useForm();
+    const { register, getValues, handleSubmit } = useForm();
     const navigate = useNavigate();
 
     const submitLogin = () => {

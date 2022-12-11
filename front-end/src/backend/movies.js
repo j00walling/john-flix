@@ -26,12 +26,11 @@ async function search(searchRequest, accessToken) {
     return Axios.request(options);
 }
 
-async function getMovieDetail(queryParams, movieId, accessToken) {
+async function getMovieDetail(movieId, accessToken) {
     const options = {
         method: "GET",
         baseURL: Config.moviesBaseUrl,
         url: Config.movies.getMovieDetail + movieId,
-        params: queryParams,
         headers: {
             Authorization: "Bearer " + accessToken
         }

@@ -4,29 +4,26 @@
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <repositories>
-        <repository>
-            <id>jitpack.io</id>
-            <url>https://jitpack.io</url>
-        </repository>
-    </repositories>
-
     <parent>
-        <groupId>com.github.klefstad-teaching</groupId>
-        <artifactId>CS122B-Parent</artifactId>
-        <version>1.0.3</version>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.0.0</version>
+        <relativePath/>
     </parent>
 
-    <artifactId>cs122b-be1-idm-service-starter</artifactId>
-    <name>CS122B Backend 1: IDM Service Starter</name>
+    <groupId>com.github.j00walling</groupId>
+    <artifactId>idm-service</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>idm-service</name>
+    <description>IDM Service</description>
+
+    <properties>
+        <java.version>19</java.version>
+        <maven.compiler.source>19</maven.compiler.source>
+        <maven.compiler.target>19</maven.compiler.target>
+    </properties>
 
     <dependencies>
-        <dependency>
-            <groupId>com.github.klefstad-teaching</groupId>
-            <artifactId>CS122B-Core</artifactId>
-            <version>1.0.3</version>
-        </dependency>
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -71,7 +68,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <groupId>org.springframework.boot</groupId>
                 <configuration>
-                    <mainClass>com.github.klefstad_teaching.cs122b.idm.IDMService</mainClass>
+                    <mainClass>com.github.j00walling.idm.IDMService</mainClass>
                 </configuration>
             </plugin>
         </plugins>

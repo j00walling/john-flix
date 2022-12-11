@@ -1,0 +1,9 @@
+2022-12-11T00:57:14.919-08:00  INFO 38990 --- [main] com.github.j00walling.idm.IDMService     : Starting IDMService using Java 19 with PID 38990 (/Users/johnwalling/Documents/projects/john-flix/services/idm-service/target/classes started by johnwalling in /Users/johnwalling/Documents/projects/john-flix)
+2022-12-11T00:57:14.921-08:00  INFO 38990 --- [main] com.github.j00walling.idm.IDMService     : No active profile set, falling back to 1 default profile: "default"
+2022-12-11T00:57:15.315-08:00  INFO 38990 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2022-12-11T00:57:15.320-08:00  INFO 38990 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-12-11T00:57:15.320-08:00  INFO 38990 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.1]
+2022-12-11T00:57:15.360-08:00  INFO 38990 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-12-11T00:57:15.360-08:00  INFO 38990 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 418 ms
+2022-12-11T00:57:15.561-08:00  INFO 38990 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2022-12-11T00:57:15.566-08:00  INFO 38990 --- [main] com.github.j00walling.idm.IDMService     : Started IDMService in 0.844 seconds (process running for 1.147)

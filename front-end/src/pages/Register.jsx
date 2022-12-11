@@ -11,15 +11,6 @@ const StyledDiv = styled.div`
   flex-direction: column;
 `
 
-const StyledH1 = styled.h1`
-`
-
-const StyledInput = styled.input`
-`
-
-const StyledButton = styled.button`
-`
-
 const Register = () => {
     const {
         accessToken, setAccessToken,

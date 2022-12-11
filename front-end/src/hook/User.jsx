@@ -5,8 +5,8 @@ const localStorage = require("local-storage");
 const UserContext = createContext({});
 
 export const UserProvider = ({children}) => {
-    const [accessToken, accessTokenSetter] = useState(localStorage.get("access_token"));
-    const [refreshToken, refreshTokenSetter] = useState(localStorage.get("refresh_token"));
+    const [ accessToken, accessTokenSetter ] = useState(localStorage.get("access_token"));
+    const [ refreshToken, refreshTokenSetter ] = useState(localStorage.get("refresh_token"));
 
     const setAccessToken = (accessToken) => {
         accessTokenSetter(accessToken);
